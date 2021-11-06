@@ -7,4 +7,9 @@
 {% block content %}
   <p>{{blog.desc}}</p>
   <p>{{blog.created_at}}</p>
+  <hr>
+  <h4>Komentar :</h4>
+  {% for comment in blog.comment_set.all %}
+    <p>{{comment.desc}}</p>
+  {% endfor %}
 {% endblock %}

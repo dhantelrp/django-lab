@@ -11,10 +11,9 @@
     </style>
   </head>
   <body>
-    <h2>{{blog.title}}</h2>
-    <br>
-
-    {% block content %}{% endblock %}
-
+    <div class="body">
+      <h2>{{blog.title}}</h2>
+      {% block content %}{% endblock %}
+    </div>
   </body>
 </html>
