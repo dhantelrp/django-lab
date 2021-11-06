@@ -10,4 +10,9 @@ def index(request):
     # kemudian Versi 2 saat penambahan basic TEMPLATES
     return render(request, 'blogs/index.html', {'blogs': blogs})
 
+def single(request, id):
+    blog = Blog.objects.get(pk = id)
+    return render(request, 'blogs/single.html', {'blog': blog})
+
+
 # Create your views here.

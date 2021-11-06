@@ -1,11 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+    </style>
   </head>
   <body>
-    <h2>Welcome to Blog Site!</h2>
+    <h2>{{blog.title}}</h2>
     <br>
 
     {% block content %}{% endblock %}
